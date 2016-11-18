@@ -22,8 +22,6 @@ class FPS {
 			if (time - this.currentSec <= 1000) { //if under a second
 				this.frameCount++;
 				let timeElapsed = (time - this.currentSec) / 1000; //time elapsed in seconds.
-				console.log('frameCount: ', this.frameCount);
-				console.log('time elapsed: ', timeElapsed);
 				//set timeout so that it doesn't block the next animation frame call.
 				setTimeout(() => this.callback(Math.round(this.frameCount / timeElapsed)));
 
